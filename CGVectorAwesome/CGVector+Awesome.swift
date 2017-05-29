@@ -71,7 +71,7 @@ extension CGVector {
     
     /* Calculate the angle of `vector` for use with a SpriteKit zRotation property */
     func angleSpriteKit() -> CGFloat {
-        return fmod(CGFloat(M_PI * 2.0) - angle() + CGFloat(M_PI_2), CGFloat(M_PI * 2.0))
+		return fmod((CGFloat.pi * 2) - angle() + (CGFloat.pi / 2.0 ), CGFloat.pi * 2)
     }
     
     /* Calculate the dot product of two vectors */

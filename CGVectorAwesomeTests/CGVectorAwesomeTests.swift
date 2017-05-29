@@ -64,13 +64,13 @@ class CGVectorAwesomeTests: XCTestCase {
     func testAngle() {
         let v1 = CGVector(dx: 1, dy: 1)
         let result = v1.angle()
-        XCTAssertEqualWithAccuracy(Double(result), M_PI_4, accuracy: 0.0001)
+		XCTAssertEqualWithAccuracy(Double(result), .pi/4, accuracy: 0.0001)
     }
     
     func testAngleSpriteKit() {
         let v1 = CGVector(dx: 1, dy: 1)
         let result = v1.angleSpriteKit()
-        XCTAssertEqualWithAccuracy(Double(result), M_PI_4, accuracy: 0.0001)
+        XCTAssertEqualWithAccuracy(Double(result), .pi/4, accuracy: 0.0001)
     }
     
     func testAngleToZero() {
@@ -99,7 +99,7 @@ class CGVectorAwesomeTests: XCTestCase {
         let v4 = CGVector(dx: -100, dy: -100)
         
         let result = v3.angleTo(v4)
-        XCTAssertEqualWithAccuracy(Double(result), M_PI, accuracy: 0.0001)
+        XCTAssertEqualWithAccuracy(Double(result), .pi, accuracy: 0.0001)
     }
     
     func testAngleToPerpendicular() {
@@ -107,14 +107,14 @@ class CGVectorAwesomeTests: XCTestCase {
         let v2 = CGVector(dx: 0, dy: 1)
         
         let result = v1.angleTo(v2)
-        XCTAssertEqualWithAccuracy(Double(result), M_PI_2, accuracy: 0.0001)
+        XCTAssertEqualWithAccuracy(Double(result), .pi/2, accuracy: 0.0001)
     }
     
     func testAngleToAcute() {
         let v1 = CGVector(dx: 1, dy: 1)
         let v2 = CGVector(dx: 1, dy: 0)
         let result = v1.angleTo(v2)
-        XCTAssertEqualWithAccuracy(Double(result), M_PI_4, accuracy: 0.0001)
+        XCTAssertEqualWithAccuracy(Double(result), .pi/4, accuracy: 0.0001)
     }
     
     func testDotProductPerpendicular() {
