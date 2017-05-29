@@ -66,7 +66,7 @@ extension CGVector {
 
     /* Calculate the angle of `vector` */
     func angle() -> CGFloat {
-        return atan2(dx, dy)
+        return atan2(dy, dx)
     }
     
     /* Calculate the angle of `vector` for use with a SpriteKit zRotation property */
