@@ -17,22 +17,22 @@ extension CGVector {
     }
     
     /* Add two vectors */
-    func sum(vector: CGVector) -> CGVector {
+    func sum(_ vector: CGVector) -> CGVector {
         return CGVector(dx: dx + vector.dx, dy: dy + vector.dy)
     }
     
     /* Subtract two vectors */
-    func difference(vector: CGVector) -> CGVector {
+    func difference(_ vector: CGVector) -> CGVector {
         return CGVector(dx: dx - vector.dx, dy: dy - vector.dy)
     }
     
     /* Multiply two vectors */
-    func multiply(vector: CGVector) -> CGVector {
+    func multiply(_ vector: CGVector) -> CGVector {
         return CGVector(dx: dx * vector.dx, dy: dy * vector.dy)
     }
     
     /* Multiply a vector by a single scalar */
-    func multiply(scalar: CGFloat) -> CGVector {
+    func multiply(_ scalar: CGFloat) -> CGVector {
         return CGVector(dx: dx * scalar, dy: dy * scalar)
     }
     
@@ -53,7 +53,7 @@ extension CGVector {
     }
     
     /* Calculate the angle of between two vectors */
-    func angleTo(vector: CGVector) -> CGFloat {
+    func angleTo(_ vector: CGVector) -> CGFloat {
         let dot = dotProduct(vector)
         let magnitude = length() * vector.length()
         if magnitude == 0 {
@@ -75,7 +75,7 @@ extension CGVector {
     }
     
     /* Calculate the dot product of two vectors */
-    func dotProduct(vector: CGVector) -> CGFloat {
+    func dotProduct(_ vector: CGVector) -> CGFloat {
         return dx * vector.dx + dy * vector.dy
     }
     
@@ -85,12 +85,12 @@ extension CGVector {
     }
     
     /* Calculate the distance between two vectors */
-    func distance(vector: CGVector) -> CGFloat {
+    func distance(_ vector: CGVector) -> CGFloat {
         return vector.difference(self).length()
     }
     
     /* Returns true if a given vector is perpendicular to this vector */
-    func isPerpendicularTo(vector: CGVector) -> Bool {
+    func isPerpendicularTo(_ vector: CGVector) -> Bool {
         return dotProduct(vector) == 0
     }
 }
