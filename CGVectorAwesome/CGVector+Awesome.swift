@@ -5,6 +5,8 @@
 //  Created by Sam Green on 6/24/16.
 //  Copyright © 2016 Sam Green. All rights reserved.
 //
+//	Modified by Florian Heller on 29/05/2017
+//	Converted to Swift5 on 12/04/2021
 
 import Foundation
 import CoreGraphics
@@ -12,8 +14,7 @@ import CoreGraphics
 extension CGVector {
     /* Create a vector from the given CGPoint */
     init(point: CGPoint) {
-        dx = point.x
-        dy = point.y
+		self.init(dx: point.x, dy: point.y)
     }
     
     /* Add two vectors */
